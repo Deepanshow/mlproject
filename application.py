@@ -11,11 +11,11 @@ application=Flask(__name__)
 
 ## Route for a home page
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html') 
 
-@app.route('/predictdata',methods=['GET','POST'])
+@application.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
         return render_template('home.html')
